@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "{TITLE}"
+title = "Dreameh's Playground"
 
 enableRobotsTXT = true
 disableAliases = true
@@ -31,3 +31,7 @@ baseName = "_headers"
 isPlainText = true
 notAlternative = true
 
+[[menu.main]]
+	name = "About"
+	identifier = "about"
+	url = "/pages/about/"

@@ -1,3 +1,8 @@
 {{ $s := resources.Get "sass/app.scss" | toCSS | postCSS (dict "config" "postcss.config.js") | minify }}
 
 <link rel="stylesheet" href="{{ $s.Permalink }}" />
+<link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Source+Code+Pro:500" rel="stylesheet">
+<link rel="stylesheet" href="/css/shades-of-purple.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+

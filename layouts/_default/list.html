@@ -1,12 +1,13 @@
 {{ define "main" }}
-    
-    {{ range .Paginator.Pages }}
+
+<section class="articles-list container">
+    {{ range where .Pages "Section" "post" }}
         <article>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            {{ .Content }}
-        </article>
+	    {{ .Summary }}
+	</article>
     {{ end }}
 
     {{ template "_internal/pagination.html" . }}
-
+</section>
 {{ end }}

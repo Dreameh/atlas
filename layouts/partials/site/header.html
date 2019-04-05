@@ -1,5 +1,12 @@
-<header class="site-header" role="banner">
-
+<nav class="navigation">
+  <div>
     <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
-    
-</header>
+    <ul class="navigation-list">
+      {{ if .Site.Menus.main }}
+      {{ range .Site.Menus.main }}
+      <li class="navigation-item"><a class="navigation-link" href="{{ .URL }}"> {{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</nav>

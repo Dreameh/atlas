@@ -1,8 +1,15 @@
 {{ define "main" }}
 
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+<div class="container content">
+  <article>
+    <header>
+    <h1 class="post-title">{{ .Title }}</h1>
+    <i class="post-meta"></i>
+    <h4 class="post-date">{{ dateFormat "January 6, 2006" .Date }}</h4>
+    </header>
+    {{ .Content }}
+  </article>
+  {{ template "_internal/disqus.html" . }}
+</div>
 
 {{ end }}
